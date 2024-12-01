@@ -26,5 +26,14 @@ export function tally(list) {
     }, new Map());
 }
 
-function tallyProduct(tallyA, tallyB) {
+export function tallyProduct(tallyA, tallyB) {
+    const products = [];
+
+    tallyA.forEach((tallyAOccurrence, number) => {
+        const tallyBOccurrence = tallyB.get(number) || 0;
+
+        products.push(tallyAOccurrence * tallyBOccurrence * number);
+    });
+
+    return sumList(products);
 }

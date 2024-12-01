@@ -9,3 +9,15 @@ exports[`getListSums 1`] = `
 `;
 
 exports[`sumList 1`] = `61`;
+
+exports[`tally 1`] = `
+Map {
+  2 => 2,
+  3 => 2,
+  4 => 1,
+  6 => 2,
+  8 => 1,
+}
+`;
+
+exports[`tallyProduct 1`] = `76`;

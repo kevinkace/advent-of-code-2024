@@ -1,7 +1,7 @@
 import { describe, expect, test } from "vitest";
 
 import { splitToLists } from "../../utils/data-parsers";
-import { getListDiffs, sortLists, sumList, tally } from "../../utils/lists";
+import { getListDiffs, sortLists, sumList, tally, tallyProduct } from "../../utils/lists";
 
 import example1 from "../data/example-1";
 import part1 from "../data/01-1";
@@ -42,7 +42,7 @@ describe("day 01-2", () => {
         expect(tally(sorted)).toMatchSnapshot();
     });
 
-    test.skip("part 2", () => {
+    test("part 2 example", () => {
         let [ listA, listB ] = sortLists(splitToLists(example1))
 
         const tallyA = tally(listA);
@@ -50,5 +50,13 @@ describe("day 01-2", () => {
 
         expect(tallyA).toMatchSnapshot();
         expect(tallyB).toMatchSnapshot();
+
+        expect(tallyProduct(tallyA, tallyB)).toEqual(31);
+    });
+
+    test("part 2", () => {
+        const [ tallyA, tallyB ] = sortLists(splitToLists(part1)).map(tally);
+
+        expect(tallyProduct(tallyA, tallyB)).toEqual(24941624);
     });
 })
