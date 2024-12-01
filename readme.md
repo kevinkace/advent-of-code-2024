@@ -1,8 +1,8 @@
-# Advent of Code 2023
+# Advent of Code 2024
 
 Javascript. Again.
 
-Using [Vitest](https://vitest.dev/) for the first time instead of Jest, and wow so much better.
+Using [Vitest](https://vitest.dev/).
 
 ## Running
 - Clone and install
@@ -10,3 +10,7 @@ Using [Vitest](https://vitest.dev/) for the first time instead of Jest, and wow 
 
 ## Next day
 - Scaffold next day with `npm run scaffoldDay -- {day}`
+
+## Implementation notes
+
+[ Day 01 ](/days/01/readme.md)
