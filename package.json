@@ -1,0 +1,16 @@
+{
+  "name": "aoc-2024",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx vitest"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "eslint": "^8.57.1",
+    "eslint-config-arenanet": "^5.11.2",
+    "vitest": "^2.1.6"
+  }
+}
