@@ -15,3 +15,16 @@ export function sortLists(lists) {
 export function sumList(list) {
     return list.reduce((acc, cur) => acc + cur, 0);
 }
+
+export function tally(list) {
+    return list.reduce((acc, cur) => {
+        const newVal = (acc.get(cur) || 0) + 1;
+
+        acc.set(cur, newVal);
+
+        return acc;
+    }, new Map());
+}
+
+function tallyProduct(tallyA, tallyB) {
+}
