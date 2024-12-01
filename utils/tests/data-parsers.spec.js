@@ -2,8 +2,13 @@ import { expect, test } from "vitest";
 
 import { splitToLists } from "../data-parsers";
 
-import example1 from "../../01/data/example-1";
+const sampleInput = `3   4
+4   3
+2   5
+1   3
+3   9
+3   3`;
 
 test("splitToLists", () => {
-    expect(splitToLists(example1)).toMatchSnapshot();
+    expect(splitToLists(sampleInput)).toMatchSnapshot();
 })

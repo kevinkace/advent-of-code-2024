@@ -1,7 +1,7 @@
 import { describe, expect, test } from "vitest";
 
-import { splitToLists } from "../../utils/data-parsers";
-import { getListDiffs, sortLists, sumList, tally, tallyProduct } from "../../utils/lists";
+import { splitToLists } from "../../../utils/data-parsers";
+import { getListDiffs, sortLists, sumList, tally, tallyProduct } from "../../../utils/lists";
 
 import example1 from "../data/example-1";
 import part1 from "../data/01-1";

@@ -29,10 +29,12 @@ export function tally(list) {
 export function tallyProduct(tallyA, tallyB) {
     const products = [];
 
-    tallyA.forEach((tallyAOccurrence, number) => {
-        const tallyBOccurrence = tallyB.get(number) || 0;
+    const [shorterTally, longerTally] = [tallyA, tallyB].sort((tA, tB) => tA.length < tB.length ? 1 : -1);
 
-        products.push(tallyAOccurrence * tallyBOccurrence * number);
+    shorterTally.forEach((sTallyOccurrence, number) => {
+        const lTallyOccurrence = longerTally.get(number) || 0;
+
+        products.push(sTallyOccurrence * lTallyOccurrence * number);
     });
 
     return sumList(products);
