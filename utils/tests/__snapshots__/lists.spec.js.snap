@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`getListSums 1`] = `
+[
+  2,
+  2,
+  0,
+]
+`;
+
+exports[`sumList 1`] = `61`;

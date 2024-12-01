@@ -1,0 +1,22 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`splitToLists 1`] = `
+[
+  [
+    3,
+    4,
+    2,
+    1,
+    3,
+    3,
+  ],
+  [
+    4,
+    3,
+    5,
+    3,
+    9,
+    3,
+  ],
+]
+`;
