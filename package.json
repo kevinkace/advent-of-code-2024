@@ -2,8 +2,10 @@
   "name": "aoc-2024",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "npx vitest"
+    "test": "npx vitest",
+    "scaffoldDay": "node ./scaffold-day/scaffold-day.js"
   },
   "author": "",
   "license": "ISC",
@@ -11,6 +13,7 @@
   "devDependencies": {
     "eslint": "^8.57.1",
     "eslint-config-arenanet": "^5.11.2",
+    "glob": "^11.0.0",
     "vitest": "^2.1.6"
   }
 }

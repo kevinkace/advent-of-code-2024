@@ -9,4 +9,4 @@ Using [Vitest](https://vitest.dev/) for the first time instead of Jest, and wow 
 - Run test eg `npm test` or `npm test -- 03`
 
 ## Next day
-- Scaffold next day with `npm run nextDay`
+- Scaffold next day with `npm run scaffoldDay -- {day}`
