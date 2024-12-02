@@ -21,3 +21,7 @@ This involves finding numbers that exist in both lists, and finding the product 
 The original wording implies iterating through lists nested, which is O(n + m). But a better data structure keeps it a to O(n).
 
 I first constructed a `Map()` from each list, tallying each number occurrence. I next iterate through the shorter `Map` and sum the product of the occurrence in each `Map` and the value of the number.
+
+## Closing
+
+Quick and simple for now. I did this on my music computer and I couldn't get Co-pilot set up - wow that makes things much slower.
