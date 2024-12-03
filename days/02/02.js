@@ -1,20 +1,16 @@
-function isPos(dir) {
-    return dir === 1;
-}
-
-function isNeg(dir) {
-    return dir === -1;
-}
-
-
 export function testSafe(data) {
-    let dir; // positive
+    let dir;
 
     return data.every((currValue, index, arr) => {
         const nextValue = arr[index + 1];
 
-        if (!nextValue) {
+        // done! (watchout for 0)
+        if (nextValue === undefined) {
             return true;
+        }
+
+        if (nextValue === currValue) {
+            return false;
         }
 
         // first iteration, get direction
@@ -22,20 +18,9 @@ export function testSafe(data) {
             dir = nextValue > currValue ? 1 : -1;
         }
 
-        // positive
         if (
-            isPos(dir) &&
-            nextValue > currValue &&
-            nextValue - currValue <= 3
-        ) {
-            return true;
-        }
-
-        // negative
-        if (
-            isNeg(dir) &&
-            nextValue < currValue &&
-            currValue - nextValue <= 3
+            nextValue > (currValue * dir) &&
+            Math.abs(nextValue - currValue) <= 3
         ) {
             return true;
         }
