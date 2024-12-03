@@ -1,11 +1,18 @@
 const EOL = "\n";
-const DELIM = "   ";
 
-export function splitToLists(data, { eol = EOL, delim = DELIM } = {}) {
-    return data.split(eol).map(line => line.split(delim)).reduce((acc, cur) => {
+export function splitToLists(data) {
+    const delim = "   ";
+
+    return data.split(EOL).map(line => line.split(delim)).reduce((acc, cur) => {
         acc[0].push(Number(cur[0]));
         acc[1].push(Number(cur[1]));
 
         return acc;
     }, [[], []]);
+}
+
+export function parse2d(data) {
+    const delim = " ";
+
+    return data.split(EOL).map(line => line.split(delim).map(n => Number(n)));
 }
