@@ -9,7 +9,7 @@ Using [Vitest](https://vitest.dev/).
 - Run test eg `npm test` or `npm test -- 03`
 
 ## Next day
-- Scaffold next day with `npm run scaffoldDay -- {day}`
+- Scaffold next day with `npm run day -- {day}`
 
 ## Implementation notes
 

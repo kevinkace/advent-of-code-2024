@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "npx vitest",
-    "scaffoldDay": "node ./scaffold-day/scaffold-day.js"
+    "day": "node ./scaffold-day/scaffold-day.js"
   },
   "author": "",
   "license": "ISC",
