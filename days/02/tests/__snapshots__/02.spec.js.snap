@@ -77,3 +77,36 @@ exports[`day 02 - 2 > ad hoc 1`] = `
   true,
 ]
 `;
+
+exports[`day 02 - new style > checkDirection 1`] = `
+[
+  true,
+  true,
+  false,
+  false,
+  false,
+  true,
+]
+`;
+
+exports[`day 02 - new style > checkDistances 1`] = `
+[
+  true,
+  false,
+  true,
+  true,
+  true,
+  true,
+]
+`;
+
+exports[`day 02 - new style > validateDiffs 1`] = `
+[
+  true,
+  false,
+  false,
+  false,
+  false,
+  true,
+]
+`;

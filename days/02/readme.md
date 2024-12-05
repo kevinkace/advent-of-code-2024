@@ -39,6 +39,7 @@ I actually prefer the first option, it reads clearer. But this is AOC so some co
 
 ## Part 2
 
+being able to isolate tests is very important.
 
 
 ## Closing
