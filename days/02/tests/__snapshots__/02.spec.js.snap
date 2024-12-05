@@ -58,4 +58,22 @@ exports[`day 02 - 1 > example 2`] = `
 ]
 `;
 
-exports[`day 02 - 1 > part 1 1`] = `512`;
+exports[`day 02 - 2 > ad hoc - single row 1`] = `
+[
+  -2,
+  -2,
+  0,
+  -3,
+]
+`;
+
+exports[`day 02 - 2 > ad hoc 1`] = `
+[
+  true,
+  false,
+  false,
+  true,
+  true,
+  true,
+]
+`;
