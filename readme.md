@@ -13,4 +13,7 @@ Using [Vitest](https://vitest.dev/).
 
 ## Implementation notes
 
-[ Day 01 ](/days/01/readme.md)
+- [ Day 01 ](/days/01/readme.md)
+- [ Day 02 ](/days/02/readme.md)
+- [ Day 03 ](/days/03/readme.md)
+- [ Day 04 ](/days/04/readme.md)
