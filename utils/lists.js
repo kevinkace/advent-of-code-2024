@@ -53,3 +53,7 @@ export function arrToDiffs(arr) {
         return acc;
     }, []);
 }
+
+export function trueCount(rows) {
+    return rows.filter(Boolean).length;
+}
