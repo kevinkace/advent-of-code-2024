@@ -39,3 +39,21 @@ export function tallyProduct(tallyA, tallyB) {
 
     return sumList(products);
 }
+
+export function arrToDiffs(arr) {
+    return arr.reduce((acc, curr, index) => {
+        const next = arr[index + 1];
+
+        if (next === undefined) {
+            return acc;
+        }
+
+        acc.push(next - curr);
+
+        return acc;
+    }, []);
+}
+
+export function trueCount(rows) {
+    return rows.filter(Boolean).length;
+}

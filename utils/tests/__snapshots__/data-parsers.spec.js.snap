@@ -1,5 +1,38 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`parse2d 1`] = `
+[
+  [
+    7,
+    6,
+    4,
+    2,
+    1,
+  ],
+  [
+    1,
+    2,
+    7,
+    8,
+    9,
+  ],
+  [
+    9,
+    7,
+    6,
+    2,
+    1,
+  ],
+  [
+    1,
+    3,
+    2,
+    4,
+    5,
+  ],
+]
+`;
+
 exports[`splitToLists 1`] = `
 [
   [

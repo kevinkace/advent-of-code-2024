@@ -1,7 +1,12 @@
 import { describe, expect, test } from "vitest";
 
 import example1 from "../data/example-1";
-import part1 from "../data/01-1";
+import part1 from "../data/{day}-1";
+
+const answers = {
+    // part1: ,
+    // part2:
+};
 
 
 describe("day {day} - 1", () => {
