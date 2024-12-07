@@ -39,9 +39,6 @@ I actually prefer the first option, it reads clearer. But this is AOC so some co
 
 ## Part 2
 
-being able to isolate tests is very important.
+This took me way too long. I initially interpreted the problem incorrectly, tbh not sure what I was trying to do based on the code I wrote...
 
-
-## Closing
-
-
+My main takeaway: it's important to be able to isolate tests cases.
