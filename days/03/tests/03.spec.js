@@ -1,9 +1,9 @@
 import { readFileSync } from "node:fs";
-import path from "node:path";
+import path             from "node:path";
 
 import { describe, expect, test } from "vitest";
 
-import { getDoIndexes, getDontIndexes, getMuls, sumMuls } from "../03";
+import { getMuls, sumMuls } from "../03";
 
 function getFile(filePath) {
     return  readFileSync(path.join(__dirname, filePath), "utf-8");
@@ -11,7 +11,7 @@ function getFile(filePath) {
 
 const example1 = getFile("../data/example-1.log");
 const example2 = getFile("../data/example-2.log");
-const part1 = getFile("../data/03-1.log");
+const part1    = getFile("../data/03-1.log");
 
 const answers = {
     part1: 188741603,
