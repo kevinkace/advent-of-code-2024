@@ -1,5 +1,5 @@
-const mulRegex = /mul\(([0-9]*),([0-9]*)\)/g;
-const doRegex = /do\(\)/g;
+const mulRegex  = /mul\(([0-9]*),([0-9]*)\)/g;
+const doRegex   = /do\(\)/g;
 const dontRegex = /don\'t\(\)/g;
 
 export function getMuls(input) {
@@ -15,9 +15,8 @@ export function getDontIndexes(input) {
 }
 
 export function sumMuls(input) {
-
-    const muls = getMuls(input);
-    const doIndexes = getDoIndexes(input);
+    const muls        = getMuls(input);
+    const doIndexes   = getDoIndexes(input);
     const dontIndexes = getDontIndexes(input);
 
     const queue = [];
@@ -40,17 +39,21 @@ export function sumMuls(input) {
     return queue.reduce((acc, q, i) => {
         if (q[0] === "do()") {
             enabled = true;
-            return acc;
+
+            
+return acc;
         } else if (q[0] === "don't()") {
             enabled = false;
-            return acc;
+
+            
+return acc;
         }
 
         if (!enabled) {
             return acc;
         }
 
-        acc += Number(q[1]) * Number(q[2])
+        acc += Number(q[1]) * Number(q[2]);
 
         return acc;
     }, 0);

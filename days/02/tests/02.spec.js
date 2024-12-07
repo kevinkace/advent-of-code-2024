@@ -1,15 +1,15 @@
 import { describe, expect, test } from "vitest";
 
-import { parse2d } from "../../../utils/data-parsers";
+import { parse2d }   from "../../../utils/data-parsers";
 import { trueCount } from "../../../utils/lists";
 
 import example1 from "../data/example-1";
-import part1 from "../data/02-1";
+import part1    from "../data/02-1";
 
 import { testSafe, valArrTolerance, validateRows, validRowCount, valRowsTolerance } from "../02";
 
 const parsedExample = parse2d(example1);
-const parsedData = parse2d(part1);
+const parsedData    = parse2d(part1);
 
 const answers = {
     part1 : 572,
@@ -38,23 +38,23 @@ describe.skip("day 02 - 1", () => {
 
 describe("day 02 - 2", () => {
     test("example", () => {
-        const data = valRowsTolerance(parsedExample);
+        const data  = valRowsTolerance(parsedExample);
         const count = trueCount(data);
 
         expect(count).toBe(4);
     });
 
     test("ad hoc - single row", () => {
-        const a1 = [2, 5, 6, 8, 6 ];
+        const a1 = [ 2, 5, 6, 8, 6 ];
 
-        const data = valRowsTolerance([a1]);
+        const data  = valRowsTolerance([ a1 ]);
         const count = trueCount(data);
 
         expect(count).toBe(1);
     });
 
     test("part 2", () => {
-        const data = valRowsTolerance(parsedData);
+        const data  = valRowsTolerance(parsedData);
         const count = trueCount(data);
 
         expect(count).toEqual(answers.part2);

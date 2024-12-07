@@ -1,4 +1,4 @@
-export function getListDiffs([listA, listB]) {
+export function getListDiffs([ listA, listB ]) {
     const diffs = [];
 
     for (let index = 0; index < listA.length; index++) {
@@ -9,7 +9,7 @@ export function getListDiffs([listA, listB]) {
 }
 
 export function sortLists(lists) {
-    return lists.map(list => list.sort((a, b) => a > b ? 1 : -1));
+    return lists.map(list => list.sort((a, b) => (a > b ? 1 : -1)));
 }
 
 export function sumList(list) {
@@ -29,7 +29,7 @@ export function tally(list) {
 export function tallyProduct(tallyA, tallyB) {
     const products = [];
 
-    const [shorterTally, longerTally] = [tallyA, tallyB].sort((tA, tB) => tA.length < tB.length ? 1 : -1);
+    const [ shorterTally, longerTally ] = [ tallyA, tallyB ].sort((tA, tB) => (tA.length < tB.length ? 1 : -1));
 
     shorterTally.forEach((sTallyOccurrence, number) => {
         const lTallyOccurrence = longerTally.get(number) || 0;

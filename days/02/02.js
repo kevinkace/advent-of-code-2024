@@ -9,7 +9,7 @@ export function checkDirections(diffs) {
         return false;
     }
 
-    let dir = getDir(diffs[0]);
+    const dir = getDir(diffs[0]);
 
     return diffs.every(diff => (dir === getDir(diff)));
 }
