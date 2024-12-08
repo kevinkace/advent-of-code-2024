@@ -4,7 +4,7 @@ import path             from "node:path";
 import { describe, expect, test } from "vitest";
 
 function getFile(filePath) {
-    return  readFileSync(path.join(__dirname, filePath), "utf-8");
+    return readFileSync(path.join(__dirname, filePath), "utf-8");
 }
 
 const example1 = getFile("../data/example-1.log");
@@ -20,16 +20,17 @@ const answers = {
 
 describe("day {day} - 1", () => {
     test("example", () => {
+        expect(typeof example1).toBe("string");
     });
 
-    test("part 1", () => {
-    });
+    // test("part 1", () => {
+    // });
 });
 
-describe("day {day} - 2", () => {
-    test("example", () => {
-    });
+// describe("day {day} - 2", () => {
+//     test("example", () => {
+//     });
 
-    test("part 2", () => {
-    });
-});
+//     test("part 2", () => {
+//     });
+// });

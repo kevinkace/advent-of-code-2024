@@ -53,3 +53,50 @@ export function checkWord(string, word) {
 
     return total;
 }
+
+export function getCorners(string, { row, col }) {
+    const deltas = {
+        nw : [ -1, -1 ],
+        sw : [ -1, 1 ],
+        se : [ 1, 1 ],
+        ne : [ 1, -1 ]
+    };
+
+    return Object.entries(deltas).reduce((acc, [ key, [ rowDelta, colDelta ]]) => {
+        const char = letterAt(string, { row : row + rowDelta, col : col + colDelta });
+
+        acc[key] = char;
+
+        return acc;
+    }, {});
+}
+
+
+export function checkXPosition(string, xword, position) {
+    const char       = letterAt(string, position);
+    const middleChar = xword[1];
+    const firstChar  = xword[0];
+    const lastChar   = xword[2];
+
+    if (char !== middleChar) {
+        return 0;
+    }
+
+    const corners = getCorners(string, position);
+
+    const cornersString = Object.values(corners).join("");
+
+    return `${cornersString}${cornersString}`.includes(`${firstChar}${firstChar}${lastChar}${lastChar}`) ? 1 : 0;
+}
+
+export function checkXword(string, xword) {
+    let total = 0;
+
+    walkString(string, (char, pos) => {
+        const result = checkXPosition(string, xword, pos);
+
+        total += result;
+    });
+
+    return total;
+}

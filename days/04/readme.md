@@ -24,8 +24,8 @@ But I got the correct solution with first run.
 
 ## Part 2
 
-
+Not too bad to search for other patterns once you have a walker and helpers. My solution only handles trivial cases - 3 word xword.
 
 ## Closing
 
-
+It's funny all the lessons I relearn, this time mainly how to work with large strings more efficiently.
