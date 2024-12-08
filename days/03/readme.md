@@ -1,6 +1,6 @@
 # Day 03
 
-https://adventofcode.com/2024/day/03
+https://adventofcode.com/2024/day/3
 
 
 
@@ -17,3 +17,5 @@ This was a pretty simple modification from part 1, just a couple more regexes, p
 ## Closing
 
 I'm glad this was a quick one compared to day 2 part 2...
+
+Ran into an issue with vitest importing from a file exporting a single long string of the problem input. I opted to switch to `readFile` after a short google without a solution.

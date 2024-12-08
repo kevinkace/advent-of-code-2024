@@ -1,7 +1,8 @@
 import { cp, readFile, rename, writeFile } from "node:fs/promises";
-import { readdirSync } from "node:fs";
+import { readdirSync }                     from "node:fs";
+import path                                from "node:path";
+
 import { glob } from "glob";
-import path from "node:path";
 
 let day = process.argv[2];
 

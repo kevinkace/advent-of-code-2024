@@ -16,3 +16,11 @@ export function parse2d(data) {
 
     return data.split(EOL).map(line => line.split(delim).map(n => Number(n)));
 }
+
+export function walkString(string, cb) {
+    string.split(EOL).forEach((rowChars, row) => {
+        rowChars.split("").forEach((char, col) => {
+            cb(char, { row, col });
+        });
+    });
+}
