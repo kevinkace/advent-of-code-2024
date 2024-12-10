@@ -23,6 +23,10 @@ export function buildRules(string) {
     return rules;
 }
 
+export function getRulesPairs(string) {
+    return string.split(eol + eol)[0].split(eol);
+}
+
 export function getPagesList(string) {
     const [ _, pages ] = string.split(eol + eol);
 
@@ -68,4 +72,20 @@ export function getMiddlePageSum(rules, pagesList) {
     });
 
     return middlePageSum;
+}
+
+export function sortPageList(rulesPairs, pageList) {
+    const pages = pageList.split(",");
+
+    return pages.sort((a, b) => {
+        if (rulesPairs.includes(`${a}|${b}`)) {
+            return -1;
+        }
+
+        if (rulesPairs.includes(`${b}|${a}`)) {
+            return 1;
+        }
+
+        return 0;
+    }).join(",");
 }
