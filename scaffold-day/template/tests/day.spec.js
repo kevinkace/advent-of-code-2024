@@ -8,7 +8,7 @@ function getFile(filePath) {
 }
 
 const example1 = getFile("../data/example-1.log");
-const part1    = getFile("../data/{day}-1.log");
+const part1    = getFile("../data/part-1.log");
 
 const answers = {
     // example1:
@@ -20,7 +20,7 @@ const answers = {
 
 describe("day {day} - 1", () => {
     test("example", () => {
-        expect(typeof example1).toBe("string");
+
     });
 
     // test("part 1", () => {
