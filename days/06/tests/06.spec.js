@@ -12,8 +12,8 @@ const example1 = getFile("../data/example-1.txt");
 const part1    = getFile("../data/input-1.txt");
 
 const answers = {
-    example1 : 41
-    // part1: ,
+    example1 : 41,
+    part1    : 5212,
     // part2:,
     // example2
 };
@@ -39,15 +39,15 @@ describe("day 06 - 1", () => {
     });
 
     test("example", () => {
-        expect(walkMap(example1).positions).toBe(answers.example1);
+        const { positions } = walkMap(example1);
+
+        expect(positions).toBe(answers.example1);
     });
 
-    test.only("part 1", () => {
+    test("part 1", () => {
         const { positions } = walkMap(part1);
 
-        console.log(positions);
-
-        expect(positions).toBeGreaterThan(5211);
+        expect(positions).toBe(answers.part1);
     });
 });
 

@@ -1,5 +1,6 @@
 import { writeFileSync } from "fs";
 import { get }           from "http";
+import path              from "path";
 
 const EOL = require("os").EOL;
 
@@ -68,19 +69,19 @@ export function getStartPosition(map, startChar) {
     return { x : idx % cols, y : Math.floor(idx / rows) };
 }
 
-export function walkMap(map, { startChar = "^", dx = 0, dy = -1 } = {}) {
+export function walkMap(map, { startChar = "^", marker = "X", dx = 0, dy = -1 } = {}) {
     let currPosition = { ...getStartPosition(map, startChar), dx, dy };
     let moves        = 0;
     let newMap       = map.slice(0);
 
-    const maps = [ newMap ];
+    // const maps = [ newMap ];
 
     while (inBounds(map, currPosition)) {
         if (moves !== 0) {
-            // maps.push(setChar(maps.at(-1), currPosition, "X"));
-            newMap = setChar(newMap, currPosition, "X");
+            // maps.push(setChar(maps.at(-1), currPosition, marker));
+            newMap = setChar(newMap, currPosition, marker);
 
-            writeFileSync("./map.txt", newMap);
+            // writeFileSync("./map.txt", newMap);
         }
 
         currPosition = move(map, currPosition);
@@ -89,8 +90,18 @@ export function walkMap(map, { startChar = "^", dx = 0, dy = -1 } = {}) {
     }
 
     // console.log(maps, currPosition);
+    // newMap = setChar(newMap, currPosition, "+");
 
-    return { moves, positions : newMap.replaceAll(EOL, "").split("").filter((char) => char === "X").length };
+    writeFileSync(path.join(__dirname, "./map.txt"), newMap);
+
+    return {
+        moves,
+        positions : newMap
+            .replaceAll(EOL, "")
+            .split("")
+            .filter((char) => char === marker || char === startChar)
+            .length
+        };
 }
 
 export function countInfections(map, iterations) {
