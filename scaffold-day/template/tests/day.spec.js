@@ -7,8 +7,8 @@ function getFile(filePath) {
     return readFileSync(path.join(__dirname, filePath), "utf-8");
 }
 
-const example1 = getFile("../data/example-1.log");
-const part1    = getFile("../data/part-1.log");
+const example1 = getFile("../data/example-1.txt");
+const part1    = getFile("../data/input-1.txt");
 
 const answers = {
     // example1:
