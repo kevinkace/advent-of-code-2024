@@ -12,7 +12,7 @@ After a few failed starts (I'm blaming Co-pilot...) I ended up with a walker fun
 
 ## Part 2
 
-
+Pretty easy modification to get this. Update all the binary things to trinary (not sure that's a word), and rip through the number sets that fail the binary version with the trinary one.
 
 ## Closing
 
